@@ -29,6 +29,7 @@ anyhow = "1.0.70"
 openidconnect = { version = "2.5.1", default-features = false }
 futures-util = "0.3.28"
 shuttle-static-folder = "0.13.1"
+tracing = "0.1.37"
 
 [patch.crates-io]
 uuid = { git = "https://github.com/kitsune-soc/uuid.git", rev = "bfa3f702e61b3042b208a16df6e934e11fa6adfc" }

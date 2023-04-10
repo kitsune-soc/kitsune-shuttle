@@ -2621,6 +2621,7 @@ dependencies = [
  "shuttle-service",
  "shuttle-static-folder",
  "tokio",
+ "tracing",
 ]
 
 [[package]]
