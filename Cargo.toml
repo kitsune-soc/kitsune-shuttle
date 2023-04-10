@@ -1,0 +1,34 @@
+[package]
+name = "kitsune-shuttle"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+shuttle-runtime = "0.13.0"
+axum = "0.6.12"
+shuttle-axum = "0.13.0"
+tokio = "1.27.0"
+shuttle-service = "0.13.0"
+sea-orm = "0.11.2"
+async-trait = "0.1.68"
+kitsune = { path = "kitsune/kitsune" }
+kitsune-messaging = { path = "kitsune/kitsune-messaging" }
+kitsune-storage = { path = "kitsune/kitsune-storage" }
+migration = { path = "kitsune/kitsune-db/migration" }
+kitsune-search-proto = { path = "kitsune/kitsune-search/proto", features = ["vendored-protoc"] }
+mimalloc = "0.1.36"
+shuttle-secrets = "0.13.0"
+serde_dhall = { version = "0.12.1", default-features = false }
+deadpool-redis = { git = "https://github.com/aumetra/deadpool", rev = "2349b0f8e68ea86dbe1a06e32dbea0ea6740b0e6" }
+aws-sdk-s3 = "0.25.1"
+aws-credential-types = "0.55.0"
+once_cell = "1.17.1"
+serde = { version = "1.0.159", features = ["derive"] }
+anyhow = "1.0.70"
+openidconnect = { version = "2.5.1", default-features = false }
+futures-util = "0.3.28"
+shuttle-static-folder = "0.13.1"
+
+[patch.crates-io]
+uuid = { git = "https://github.com/kitsune-soc/uuid.git", rev = "bfa3f702e61b3042b208a16df6e934e11fa6adfc" }

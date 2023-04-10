@@ -1,0 +1,3 @@
+[submodule "kitsune"]
+	path = kitsune
+	url = https://github.com/kitsune-soc/kitsune.git
