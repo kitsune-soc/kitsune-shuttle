@@ -16,7 +16,7 @@ async fn axum(
     #[Secrets] secrets: SecretStore,
     #[StaticFolder(folder = "kitsune")] kitsune_folder: PathBuf,
 ) -> shuttle_axum::ShuttleAxum {
-    std::os::unix::fs::symlink(kitsune_folder.join("public"), "public")?;
+    let _ = std::os::unix::fs::symlink(kitsune_folder.join("public"), "public");
 
     let mut config: Configuration = serde_dhall::from_str(&secrets.get("config").unwrap())
         .static_type_annotation()
