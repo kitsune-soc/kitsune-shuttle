@@ -27,8 +27,7 @@ impl ResourceBuilder<DatabaseConnection> for PostgresResource {
             .await
             .map_err(|err| shuttle_service::Error::Custom(err.into()))?;
 
-        Migrator::fresh(&db_conn)
-            //Migrator::up(&db_conn, None)
+        Migrator::up(&db_conn, None)
             .await
             .map_err(|err| shuttle_service::Error::Custom(err.into()))?;
 
